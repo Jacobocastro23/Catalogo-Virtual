@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    background-color: #f4f4f4; /* Fondo gris claro */
+    font-family: 'Roboto', sans-serif; /* Cambiado a Roboto */
+    color: #333; /* Texto oscuro */
+    overflow-x: hidden;
+}
+
+header {
+    background: #343a40; /* Color gris oscuro */
+    padding: 80px 0;
+    text-align: center;
+    color: #ffffff; /* Texto blanco */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 15px;
+    background: #ffffff; /* Fondo blanco para las obras */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animación de entrada */
+    height: 100%; /* Asegura que la tarjeta use el espacio disponible */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    height: 100%; /* Asegura que la tarjeta ocupe toda la altura disponible */
+}
+
+.card-img-wrapper {
+    height: 300px; /* Tamaño fijo para las imágenes */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc; /* Borde gris claro */
+    transition: transform 0.3s;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor */
+    transition: transform 0.3s;
+}
+
+.card-img-wrapper:hover {
+    transform: scale(1.05); /* Aumentar el marco al pasar el mouse */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333; /* Texto oscuro para el título */
+    margin-top: 10px;
+}
+
+.card-description {
+    font-size: 1rem;
+    color: #666; /* Texto gris para la descripción */
+    margin: 10px 0;
+}
+
+.btn-primary {
+    background-color: #007bff; /* Color azul */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #ffffff; /* Texto blanco */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #343a40; /* Color gris oscuro para el pie de página */
+    color: #ffffff; /* Texto blanco */
+    border-top: 5px solid #ccc; /* Línea gris clara */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}

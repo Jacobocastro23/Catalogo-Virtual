@@ -1,0 +1,12 @@
+##ASI denegarAccederCarpetas
+Options All -Indexes 
+
+##ASI activarMotorRedirecciones ParaConfigurarURLamigables
+RewriteEngine on
+
+##ASI verificandoSiDirectorioPorElMetodoRequestEsValido_2daSiUnArchivoEsValido
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+##ASI HaciendoConfiguracionesParaAlmacenarEnVariableURLTodoLoQueContengaDespuesDelArchivo_index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
